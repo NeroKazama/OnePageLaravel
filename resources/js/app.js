@@ -8,7 +8,6 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-import axios from "axios";
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -28,10 +27,10 @@ Vue.component('component-fifth', require('./components/ComponentFifth.vue').defa
 Vue.component('component-sixth', require('./components/ComponentSixth.vue').default);
 Vue.component('component-seventh', require('./components/ComponentSeventh.vue').default);
 Vue.component('component-eighth', require('./components/ComponentEighth.vue').default);
-Vue.component('component-ninth', require('./components/ComponentNinth.vue').default);
+Vue.component('component-eighth', require('./components/ComponentNinth.vue').default);
 
 var VueScrollTo = require('vue-scrollto');
-Vue.use(axios);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -48,7 +47,6 @@ const app = new Vue({
         Customer: 0,
         faq: 0,
         ContactUs: 0,
-        cNinth: false,
         NavBarPhoneScreen: false,
     },
 
@@ -90,14 +88,6 @@ const app = new Vue({
             } else if ((this.ContactUs) <= window.scrollY) {
                 this.activeNav('ContactUs')
             }
-        },
-
-        DonateMethodHide() {
-            this.cNinth = false
-        },
-
-        DonateMethod() {
-            this.cNinth = true
         }
     }
 });

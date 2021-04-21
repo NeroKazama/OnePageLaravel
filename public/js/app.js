@@ -1864,8 +1864,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1966,13 +1964,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  methods: {
-    DonateMethod: function DonateMethod() {
-      this.$parent.DonateMethod();
-    }
-  }
-});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -2064,39 +2056,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  data: function data() {
-    return {
-      name: '',
-      email: '',
-      amount: ''
-    };
-  },
   methods: {
     submit: function submit() {
-      axios.post("/donation", {
-        params: {
-          name: this.name,
-          email: this.email,
-          amount: this.amount
-        }
-      }).then(function (response) {
-        this.DonateMethodHide();
-        alert("Thank You For Your Donation.");
-      }.bind(this))["catch"](function (error) {
-        alert("A Problem happend!!");
-      });
-    },
-    DonateMethodHide: function DonateMethodHide() {
-      this.$parent.DonateMethodHide();
+      alert('aaa');
     }
   }
 });
@@ -2200,13 +2163,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  methods: {
-    DonateMethod: function DonateMethod() {
-      this.$parent.DonateMethod();
-    }
-  }
-});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -2359,12 +2316,8 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -2373,7 +2326,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -2392,16 +2344,15 @@ Vue.component('component-fifth', __webpack_require__(/*! ./components/ComponentF
 Vue.component('component-sixth', __webpack_require__(/*! ./components/ComponentSixth.vue */ "./resources/js/components/ComponentSixth.vue").default);
 Vue.component('component-seventh', __webpack_require__(/*! ./components/ComponentSeventh.vue */ "./resources/js/components/ComponentSeventh.vue").default);
 Vue.component('component-eighth', __webpack_require__(/*! ./components/ComponentEighth.vue */ "./resources/js/components/ComponentEighth.vue").default);
-Vue.component('component-ninth', __webpack_require__(/*! ./components/ComponentNinth.vue */ "./resources/js/components/ComponentNinth.vue").default);
+Vue.component('component-eighth', __webpack_require__(/*! ./components/ComponentNinth.vue */ "./resources/js/components/ComponentNinth.vue").default);
 
 var VueScrollTo = __webpack_require__(/*! vue-scrollto */ "./node_modules/vue-scrollto/vue-scrollto.js");
-
-Vue.use((axios__WEBPACK_IMPORTED_MODULE_0___default()));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
 
 var app = new Vue({
   el: '#app',
@@ -2413,7 +2364,6 @@ var app = new Vue({
     Customer: 0,
     faq: 0,
     ContactUs: 0,
-    cNinth: false,
     NavBarPhoneScreen: false
   },
   mounted: function mounted() {
@@ -2451,12 +2401,6 @@ var app = new Vue({
       } else if (this.ContactUs <= window.scrollY) {
         this.activeNav('ContactUs');
       }
-    },
-    DonateMethodHide: function DonateMethodHide() {
-      this.cNinth = false;
-    },
-    DonateMethod: function DonateMethod() {
-      this.cNinth = true;
     }
   }
 });
@@ -38592,24 +38536,17 @@ var staticRenderFns = [
         _c("div", { staticClass: "w-50 h-100 sections-eighth-1" }, [
           _c("h3", [_vm._v("Newsletter")]),
           _vm._v(" "),
-          _c("h6", { staticClass: "h-50 p-4" }, [
+          _c("h6", { staticClass: "h-25 p-4" }, [
             _vm._v(
-              "\n                Please enter your email address to receive last News."
+              "\n            Please enter your email address to receive last News."
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "w-100 d-inline-flex" }, [
-            _c("input", { attrs: { type: "text", value: "Email" } }),
-            _c("a", { staticClass: "cursor-pointer", attrs: { href: "#" } }, [
-              _vm._v("Submit")
-            ])
+          _c("input", { attrs: { type: "text", value: "Email" } }),
+          _c("a", { staticClass: "cursor-pointer", attrs: { href: "#" } }, [
+            _vm._v("Submit")
           ])
         ]),
-        _vm._v(" "),
-        _c("div", {
-          staticClass:
-            "w-50 sections-eighth text-center sections-eighth-3 position-absolute"
-        }),
         _vm._v(" "),
         _c(
           "div",
@@ -38620,6 +38557,11 @@ var staticRenderFns = [
           [
             _c("img", {
               staticClass: "h-50 w-75",
+              attrs: { src: "img/eighth.svg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("img", {
+              staticClass: "h-100 position-absolute",
               attrs: { src: "img/eighth.svg", alt: "" }
             })
           ]
@@ -38769,64 +38711,54 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sections bg-heavy-blue " }, [
-    _c("div", { staticClass: "col-11 text-left m-auto section-height" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "container bg-white rounded w-100 h-100 d-lg-flex d-md-block d-sm-block"
-        },
-        [
-          _c("div", { staticClass: "CFpadding" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("p", { staticClass: "w-100 h-50" }, [
-              _vm._v(
-                "\n                Learn how design thinking, user research,\n                    business vision and marketing, and finally designing\n                    and creating real digital products for real users.  \n                "
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "p-1 w-50 m-auto" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "m-btn m-btn-orange w-100",
-                  attrs: { href: "#" },
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      return _vm.DonateMethod()
-                    }
-                  }
-                },
-                [_c("b", [_vm._v("Donate")])]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1)
-        ]
-      )
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", { staticClass: "p-1" }, [_c("b", [_vm._v("Lorem Ipsum")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "CFpadding2" }, [
-      _c("img", {
-        staticClass: "w-100 h-100",
-        attrs: { src: "img/first.svg", alt: "" }
-      })
+    return _c("div", { staticClass: "sections bg-heavy-blue " }, [
+      _c("div", { staticClass: "col-11 text-left m-auto section-height" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "container bg-white rounded w-100 h-100 d-lg-flex d-md-block d-sm-block"
+          },
+          [
+            _c("div", { staticClass: "CFpadding" }, [
+              _c("h2", { staticClass: "p-1" }, [
+                _c("b", [_vm._v("Lorem Ipsum")])
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "w-100 h-50" }, [
+                _vm._v(
+                  "\n                Learn how design thinking, user research,\n                    business vision and marketing, and finally designing\n                    and creating real digital products for real users.  \n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "p-1 w-50 m-auto" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "m-btn m-btn-orange w-100",
+                    attrs: { href: "" }
+                  },
+                  [_c("b", [_vm._v("Donate")])]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "CFpadding2" }, [
+              _c("img", {
+                staticClass: "w-100 h-100",
+                attrs: { src: "img/first.svg", alt: "" }
+              })
+            ])
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -38868,7 +38800,7 @@ var staticRenderFns = [
               "container w-100 h-100 m-auto bg-light-blue sections-forth"
           },
           [
-            _c("div", { staticClass: "w-100 h-25 text-center pt-4" }, [
+            _c("div", { staticClass: "w-100 h-25 text-center mt-4" }, [
               _c("h1", [
                 _c("b", [_vm._v("Master")]),
                 _c("p", [_vm._v("Master")])
@@ -38957,162 +38889,41 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "position-fixed w-100 h-100",
-      staticStyle: {
-        "background-color": "rgba(255, 255, 255, 0.83)",
-        top: "115px"
-      },
-      on: {
-        click: function($event) {
-          if ($event.target !== $event.currentTarget) {
-            return null
-          }
-          return _vm.DonateMethodHide()
-        }
-      }
+      staticClass: "position-absolute w-100 h-100",
+      staticStyle: { "background-color": "#fff" }
     },
     [
-      _c(
-        "div",
-        {
-          staticClass:
-            "text-center w-50 h-50 m-auto p-3 bg-white border rounded shadow",
-          staticStyle: {
-            "background-image": "linear-gradient(to right, #52e1e8, #00032b)"
-          }
-        },
-        [
-          _c("img", {
-            staticClass: "float-left pointer",
-            staticStyle: { width: "3%", cursor: "pointer" },
-            attrs: { src: "img/close.svg", alt: "" },
+      _c("div", { staticClass: "text-center w-50 h-50 m-5 p-3" }, [
+        _c("input", {
+          staticClass: "col-6 m-2",
+          attrs: { type: "text", required: "" }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "col-6 m-2",
+          attrs: { type: "email", required: "" }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "col-6 m-2",
+          attrs: { type: "text", required: "" }
+        }),
+        _vm._v(" "),
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-success col-4",
+            attrs: { href: "#" },
             on: {
               click: function($event) {
-                if ($event.target !== $event.currentTarget) {
-                  return null
-                }
-                return _vm.DonateMethodHide()
+                $event.preventDefault()
+                return _vm.submit()
               }
             }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-100 mt-5" }, [
-            _c(
-              "label",
-              {
-                staticClass: "col-lg-2 col-md-3 col-sm-10 float-left text-left",
-                attrs: { for: "name" }
-              },
-              [_vm._v("Name :")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.name,
-                  expression: "name"
-                }
-              ],
-              staticClass: "col-8 m-2 rounded",
-              staticStyle: { border: "1px solid #9999995e" },
-              attrs: { id: "name", type: "text", required: "" },
-              domProps: { value: _vm.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.name = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "label",
-              {
-                staticClass: "col-lg-2 col-md-3 col-sm-10 float-left text-left",
-                attrs: { for: "email" }
-              },
-              [_vm._v("Email :")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              staticClass: "col-8 m-2 rounded",
-              staticStyle: { border: "1px solid #9999995e" },
-              attrs: { id: "email", type: "email", required: "" },
-              domProps: { value: _vm.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.email = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "label",
-              {
-                staticClass: "col-lg-2 col-md-3 col-sm-10 float-left text-left",
-                attrs: { for: "price" }
-              },
-              [_vm._v("Amount :")]
-            ),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.amount,
-                  expression: "amount"
-                }
-              ],
-              staticClass: "col-8 m-2 rounded",
-              staticStyle: { border: "1px solid #9999995e" },
-              attrs: { id: "amount", type: "text", required: "" },
-              domProps: { value: _vm.amount },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.amount = $event.target.value
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-100 text-center" }, [
-            _c(
-              "a",
-              {
-                staticClass:
-                  "btn btn-success mt-3 mr-5 col-lg-4 col-md-6 col-sm-10",
-                attrs: { href: "#" },
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.submit()
-                  }
-                }
-              },
-              [_vm._v("Donate")]
-            )
-          ])
-        ]
-      )
+          },
+          [_vm._v("Donate")]
+        )
+      ])
     ]
   )
 }
@@ -39147,7 +38958,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "sections" }, [
-      _c("div", { staticClass: "col-12 text-left m-auto section-height" }, [
+      _c("div", { staticClass: "col-11 text-left m-auto section-height" }, [
         _c(
           "div",
           { staticClass: "container rounded w-100 h-100 d-flex m-auto" },
@@ -39225,106 +39036,90 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sections" }, [
-    _c("div", { staticClass: "col-12 text-left section-height mt-5 pt-5" }, [
-      _c(
-        "div",
-        {
-          staticClass: "container w-100 h-100 m-auto bg-white sections-seventh"
-        },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-100 h-75" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "w-25 h-75 mt-5 sections-seventh-2 p-4 white text-center"
-              },
-              [
-                _c("p", [
-                  _vm._v(
-                    "\n                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut    \n                    "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    staticClass: "w-50 btn",
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.DonateMethod()
-                      }
-                    }
-                  },
-                  [_vm._v("Donate")]
-                )
-              ]
-            )
-          ])
-        ]
-      )
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 h-25 text-center mt-4" }, [
-      _c("h1", { staticClass: "pt-5" }, [
-        _c("b", [_vm._v("Lorem Ipsum")]),
-        _c("p", [_vm._v("Lorem Ipsum")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "h-100 p-4" }, [
-      _c("p", { staticClass: "h-25" }, [
-        _c("b", [
-          _vm._v(
-            "What will be our achievements by participating in this course?"
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "h-25" }, [
-        _c("img", {
-          staticClass: "h-50 mr-3",
-          attrs: { src: "img/tick.svg", alt: "" }
-        }),
-        _vm._v(
-          "\n                        Learn the requirements of a product designer from experienced professionals in the field."
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "h-25" }, [
-        _c("img", {
-          staticClass: "h-50 mr-3",
-          attrs: { src: "img/tick.svg", alt: "" }
-        }),
-        _vm._v(
-          "\n                        Learn the requirements of a product designer from experienced professionals in the field."
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "h-25" }, [
-        _c("img", {
-          staticClass: "h-50 mr-3",
-          attrs: { src: "img/tick.svg", alt: "" }
-        }),
-        _vm._v(
-          "\n                        Learn the requirements of a product designer from experienced professionals in the field."
+    return _c("div", { staticClass: "sections" }, [
+      _c("div", { staticClass: "col-11 text-left section-height mt-5 pt-5" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "container w-100 h-100 m-auto bg-white sections-seventh"
+          },
+          [
+            _c("div", { staticClass: "w-100 h-25 text-center mt-4" }, [
+              _c("h1", { staticClass: "pt-5" }, [
+                _c("b", [_vm._v("Lorem Ipsum")]),
+                _c("p", [_vm._v("Lorem Ipsum")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "w-100 h-75" }, [
+              _c("div", { staticClass: "h-100 p-4" }, [
+                _c("p", { staticClass: "h-25" }, [
+                  _c("b", [
+                    _vm._v(
+                      "What will be our achievements by participating in this course?"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "h-25" }, [
+                  _c("img", {
+                    staticClass: "h-50 mr-3",
+                    attrs: { src: "img/tick.svg", alt: "" }
+                  }),
+                  _vm._v(
+                    "\n                        Learn the requirements of a product designer from experienced professionals in the field."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "h-25" }, [
+                  _c("img", {
+                    staticClass: "h-50 mr-3",
+                    attrs: { src: "img/tick.svg", alt: "" }
+                  }),
+                  _vm._v(
+                    "\n                        Learn the requirements of a product designer from experienced professionals in the field."
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "h-25" }, [
+                  _c("img", {
+                    staticClass: "h-50 mr-3",
+                    attrs: { src: "img/tick.svg", alt: "" }
+                  }),
+                  _vm._v(
+                    "\n                        Learn the requirements of a product designer from experienced professionals in the field."
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "w-25 h-75 mt-5 sections-seventh-2 p-4 white text-center"
+                },
+                [
+                  _c("p", [
+                    _vm._v(
+                      "\n                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut    \n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("a", { staticClass: "w-50 btn", attrs: { href: "#" } }, [
+                    _vm._v("Donate")
+                  ])
+                ]
+              )
+            ])
+          ]
         )
       ])
     ])
@@ -39360,7 +39155,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "w-100 bg-light-blue m-1 p-4 d-inline-flex cursor-pointer",
+            "w-100 bg-light-blue m-3 p-4 d-inline-flex cursor-pointer",
           staticStyle: { height: "18%", "border-radius": "1rem" },
           on: {
             click: function($event) {
@@ -39386,7 +39181,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "w-100 bg-light-blue m-1 p-4 d-inline-flex cursor-pointer",
+            "w-100 bg-light-blue m-3 p-4 d-inline-flex cursor-pointer",
           staticStyle: { height: "18%", "border-radius": "1rem" },
           on: {
             click: function($event) {
@@ -39412,7 +39207,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "w-100 bg-light-blue m-1 p-4 d-inline-flex cursor-pointer",
+            "w-100 bg-light-blue m-3 p-4 d-inline-flex cursor-pointer",
           staticStyle: { height: "18%", "border-radius": "1rem" },
           on: {
             click: function($event) {
@@ -39438,7 +39233,7 @@ var render = function() {
         "div",
         {
           staticClass:
-            "w-100 bg-light-blue m-1 p-4 d-inline-flex cursor-pointer",
+            "w-100 bg-light-blue m-3 p-4 d-inline-flex cursor-pointer",
           staticStyle: { height: "18%", "border-radius": "1rem" },
           on: {
             click: function($event) {
@@ -52405,18 +52200,6 @@ Vue.compile = compileToFunctions;
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

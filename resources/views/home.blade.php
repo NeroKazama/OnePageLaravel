@@ -25,9 +25,6 @@
         <div class="w-100" id="ContactUs">
             <component-seventh @DonateMethod="DonateMethod"></component-seventh>
         </div>
-        <div class="w-100">
-            <component-eighth></component-eighth>
-        </div>
     </div>
 
 @endsection
